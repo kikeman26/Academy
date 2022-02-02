@@ -10,8 +10,6 @@ resource "aws_instance" "frontend" {
   instance_type = var.instance_type
   subnet_id     = var.subnet_id
   security_groups = [aws_security_group.frontend_sg.id]
-
-  depends_on = [aws_security_group.frontend_sg]
 }
 
 resource "aws_security_group" "frontend_sg" {
