@@ -1,3 +1,11 @@
+/*  Archivo de Variables 
+
+En este archivo identificado como variables.tf, 
+organizaremos nuestras variables a usar en nuestra configuracion main, es decir, pasaremos
+los parametros a tomar en cuentapara la creacion de infraestuctura
+
+*/
+
 variable "aws_region" {
   type    = string
   default = "us-east-1"
@@ -20,7 +28,7 @@ variable "subnet_id" {
 
 variable "name" {
   type = string
-  default = "Terraform_SG"
+  default = "Terraform_SG_test"
 }
 
 variable "vpc" {

@@ -1,3 +1,15 @@
+/*  Archivo Main
+
+En este archivo identificado como main.tf, 
+Es donde vamos a declarar nuestros Terraform Providers,
+recursos a crear o las llamadas a los diferentes modulos.
+
+Este archivo especificara que es lo que vamos a desplegar
+en el o los providers.
+
+*/
+
+
 provider "aws" {
   region     = var.aws_region
 }
