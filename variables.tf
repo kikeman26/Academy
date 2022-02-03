@@ -1,6 +1,6 @@
-/*  Archivo de Variables 
+/*  Archivo de Variables
 
-En este archivo identificado como variables.tf, 
+En este archivo identificado como variables.tf,
 organizaremos nuestras variables a usar en nuestra configuracion main, es decir, pasaremos
 los parametros a tomar en cuentapara la creacion de infraestuctura
 
