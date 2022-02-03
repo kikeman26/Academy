@@ -12,26 +12,22 @@ en el o los providers.
 
 provider "aws" {
   region     = var.aws_region
+  skip_credentials_validation     = true
+  skip_region_validation          = true
 }
 
-
-resource "aws_instance" "frontend" {
-  ami           = var.image_id
+## AWS Modules ""
+module "ec2" {
+  source = ".//Modules/EC2"
+  image_id      = var.image_id
   instance_type = var.instance_type
   subnet_id     = var.subnet_id
-  security_groups = [aws_security_group.frontend_sg.id]
+  sg_id         = module.sg.frontend_sg_id
 }
 
-resource "aws_security_group" "frontend_sg" {
+module "sg" {
+  source = ".//Modules/SG"
   name = var.name
-  description = "My Fisrt Security Group in Terraform"
-  vpc_id = var.vpc
-  
-  ingress {
-    description = "HTTP"
-    from_port = 80
-    to_port = 80
-    protocol = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
+  vpc = var.vpc
 }
+
