@@ -16,7 +16,7 @@ provider "aws" {
   skip_region_validation          = true
 }
 
-## AWS Modules ""
+## AWS Modules 
 module "ec2" {
   source = ".//Modules/EC2"
   image_id      = var.image_id
@@ -30,4 +30,3 @@ module "sg" {
   name = var.name
   vpc = var.vpc
 }
-
