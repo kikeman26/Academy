@@ -19,14 +19,21 @@ provider "aws" {
 ## AWS Modules 
 module "ec2" {
   source = ".//Modules/EC2"
+  aws_region    = var.aws_region
   image_id      = var.image_id
   instance_type = var.instance_type
   subnet_id     = var.subnet_id
   sg_id         = module.sg.frontend_sg_id
+  tags          = var.tags
 }
 
 module "sg" {
   source = ".//Modules/SG"
   name = var.name
   vpc = var.vpc
+}
+
+module "s3" {
+  source = ".//Modules/S3"
+  bucket_names = var.bucket_names
 }
