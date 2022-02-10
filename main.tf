@@ -8,7 +8,13 @@ Este archivo especificara que es lo que vamos a desplegar
 en el o los providers.
 
 */
-
+terraform {
+  backend "s3" {
+    bucket = "terraform-academy"
+    key    = "terraform/states/project_a/terraform.tfstate"
+    region = "us-east-1"
+  }
+}
 
 provider "aws" {
   region     = var.aws_region
