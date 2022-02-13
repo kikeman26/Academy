@@ -2,9 +2,9 @@
 
 aws_region = "us-east-1"
 image_id = {
-   "us-east-1" = "ami-08e4e35cccc6189f4" # N.Virginia
-   "sa-east-1" = "ami-0420311e572d1298d" # Sao Paulo
-   "ca-central-1" = "ami-0cd73cc497a2d6e69" # Canada
+   "us-east-1" = "ami-08e4e35cccc6189f4" # N.Virginiaa
+   "sa-east-1" = "ami-0420311e572d1298d" # Sao Pauloo
+   "ca-central-1" = "ami-0cd73cc497a2d6e69" # Canadaa
 }
 instance_type = "t2.nano"
 subnet_id = "subnet-0cd24d202b4d3c485"
