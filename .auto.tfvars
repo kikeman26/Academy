@@ -18,8 +18,11 @@ vpc = "vpc-0be6b7eaeaa9c8c72"
 bucket_names = [
     "academy-terraform-1234-prod",
     "academy-terraform-1234-qa",
-    "academy-terraform-1234-dev"
+    "academy-terraform-1234-dev",
+    "academy-terraform-12345-test",
+    "academy-terraform-1234-test"
 ]
+
 /*
 bucket_names = {
     "academy-terraform-12345-test"  = "public-read-write"
